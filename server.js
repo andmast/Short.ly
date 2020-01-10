@@ -11,10 +11,15 @@ app.use(express.json()); //Used to parse JSON bodies
 //Keys
 const db = require("./config/keys").mongoURI;
 
+//Connect to MongoDB
 mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log(`MongoDB connected.`))
   .catch(err => console.log(err));
+
+// Routes
+const shorten = require("./routes/api/shorten");
+app.use("/api/shorten", shorten);
 
 // Path
 app.get("/", (req, res) => {
