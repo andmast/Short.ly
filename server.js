@@ -22,6 +22,9 @@ mongoose
 const shorten = require("./routes/api/shorten");
 app.use("/api/shorten", shorten);
 
+const redirect = require("./routes/api/shorten");
+app.use("/api/redirect", redirect);
+
 // Path
 app.get("/", (req, res) => {
   res.send("Hello World");
