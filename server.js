@@ -5,6 +5,9 @@ const mongoose = require("mongoose");
 //Init
 const app = express();
 
+// Body parser MiddleWare
+app.use(express.json()); //Used to parse JSON bodies
+
 //Keys
 const db = require("./config/keys").mongoURI;
 
