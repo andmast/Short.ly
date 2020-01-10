@@ -7,6 +7,7 @@ const app = express();
 
 // Body parser MiddleWare
 app.use(express.json()); //Used to parse JSON bodies
+app.use(express.urlencoded()); //Parse URL-encoded bodies
 
 //Keys
 const db = require("./config/keys").mongoURI;
