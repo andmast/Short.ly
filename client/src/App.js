@@ -1,14 +1,12 @@
 import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { Button } from "@material-ui/core";
+import UrlForm from "./Componets/UrlForm";
 
 export default function App() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Button variant="contained" color="primary">
-        Hello World
-      </Button>
+      <UrlForm />
     </React.Fragment>
   );
 }
