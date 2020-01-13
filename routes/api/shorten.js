@@ -10,6 +10,15 @@ shortid.characters(
 // Load URL Model
 const URL = require("../../models/Urls");
 
+router.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
 // @route GET /api/shorten/test
 // @desc Test API end point
 // @access public
@@ -32,7 +41,7 @@ router.post("/", (req, res) => {
 
   shortlyLink
     .save()
-    .then(() => res.json("URL Added!"))
+    .then(() => res.json(shortlyLink))
     .catch(err => res.status(400).json("Error: " + err));
 });
 

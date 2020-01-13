@@ -8,9 +8,8 @@ function UrlForm() {
   const handleSubmit = evt => {
     evt.preventDefault();
     axios.post("http://localhost:5000/api/shorten", { url }).then(res => {
-      console.log(res);
+      console.log(res.data.hash);
     });
-    alert(`Submitting URL ${url}`);
   };
 
   return (
