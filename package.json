@@ -21,7 +21,7 @@
   "homepage": "https://github.com/andmast/Short.ly#readme",
   "dependencies": {
     "concurrently": "^5.0.2",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "mongoose": "^5.8.6",
     "nodemon": "^2.0.2",
     "shortid": "^2.2.15"
